@@ -8,6 +8,7 @@
     <artifactId>ct5171_test1Maven</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+
     <dependencies>
         <dependency>
             <groupId>org.codehaus.mojo</groupId>
@@ -16,6 +17,7 @@
         </dependency>
     </dependencies>
     <build>
+        <finalName>${project.artifactId}</finalName>
         <plugins>
         <plugin>
             <groupId>org.codehaus.mojo</groupId>
