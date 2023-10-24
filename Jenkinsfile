@@ -21,10 +21,24 @@ pipeline{
             }
         }
 
+        stage('Package'){
+            steps{
+                //Package files with Maven
+                sh "mvn package"
+
+            }
+        }
+
         stage('Execute'){
             steps{
                 sh "mvn exec:java"
             }
         }
     }
+    post{
+        success{
+            archiveArtifacts allowEmptyArchive: true,
+                artifacts: '**/ct5171_test1Maven.jar'
+            }
+        }
 }
