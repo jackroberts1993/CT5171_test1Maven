@@ -35,6 +35,7 @@ pipeline{
             }
         }
     }
+    //Check if package successful
     post{
         success{
             archiveArtifacts allowEmptyArchive: true,
